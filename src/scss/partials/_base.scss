@@ -1,0 +1,43 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    font-family: "circular";
+    background-color: $white;
+    font-size: 15px;
+    color: #002244;
+    position: relative;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="number"] {
+    appearance: none;
+}

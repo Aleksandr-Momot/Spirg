@@ -1,0 +1,30 @@
+{
+  "name": "gulp-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-file-include": "^2.2.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "gulp-include": "^2.4.1",
+    "hammerjs": "^2.0.8",
+    "jquery-hammerjs": "^2.0.0",
+    "jquery-nice-select": "^1.1.0",
+    "jspdf": "^1.5.3",
+    "simplebar": "^5.2.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

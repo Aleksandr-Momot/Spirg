@@ -1,0 +1,338 @@
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.modal-content-wrapper {
+    flex-grow: 1;
+}
+
+.loading-signup-wrapper {
+    // height: calc(100vh - 185px);
+    @include tablet-landscape {
+      padding: 15px 20px 30px 20px;
+
+    }
+  
+    .signup-content-wrapper {
+      max-width: 1072px;
+      margin: 0 auto;
+      background-color: $white;
+      position: relative;
+      z-index: 0;
+      padding: 17px 20px;
+      padding-bottom: 0px;
+      overflow: hidden;
+      padding: 0;
+      @include tablet-landscape {
+        border-radius: 15px;
+        padding: 25px 37px 0 37px;
+      }
+  
+      .loading-bar-title {
+        font-size: 30px;
+        color: #4F2C2D;
+        font-weight: 900;
+  
+        @include tablet-portrait {
+          font-size: 50px;
+          text-align: center;
+          margin-bottom: 30px;
+          font-weight: 700;
+        }
+      }
+  
+      .loading-signup-content {
+        color: #2c3165;
+        padding-top: 0px;
+  
+        .signup-cards {
+          @include tablet-portrait {
+            display: grid;
+            grid-template-columns: repeat(3, 184px);
+            justify-content: center;
+            column-gap: 30px;
+          }
+  
+          .signup-card {
+            border-radius: 20px;
+            border: 1px solid #e2e6f1;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10px 0;
+            position: relative;
+            box-shadow: 0 1px 20px rgba(125, 153, 174, 0.16);
+            background: white;
+  
+            @include tablet-portrait {
+              margin: 0;
+            }
+  
+            .icon {
+              margin-top: 5px;
+              max-height: 65px;
+              object-fit: contain;
+              @include tablet-portrait {
+                margin-top: 33px;
+              }
+            }
+  
+            &::before {
+              content: "";
+              width: 30px;
+              height: 30px;
+              display: block;
+              border-radius: 50%;
+              background: #f2f6f9;
+              border: 1px solid #e2e6f1;
+              position: absolute;
+              left: 15px;
+              top: 15px;
+            }
+  
+            &.checked::before {
+              content: url(../images/assets/check-bold.svg);
+              background-color: #56d8ac;
+              border-color: #56d8ac;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              line-height: 0.6;
+            }
+  
+            .card-title {
+              text-align: center;
+              font-size: 16px;
+              font-weight: 500;
+              padding-top: 20px;
+  
+              @include tablet-portrait {
+                padding-top: 25px;
+              }
+            }
+          }
+        }
+  
+        .loading-wrapper {
+          margin: 15px 0 15px 0;
+          
+  
+          @include tablet-portrait {
+            margin: 30px 0px 10px 0px;
+          }
+  
+          .loading-title {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            padding-left: 8px;
+          }
+  
+          .loading-lianer-wrap {
+            padding: 13px;
+            border-radius: 50px;
+            border: 1px solid #E2E6F1;
+            box-shadow: 0 1px 20px rgba(125,153,174,.16);
+          }
+  
+          .loading-lianer {
+            background-color: #eef0f6;
+            border-radius: 50px;
+            height: 10px;
+  
+            .loading-fill {
+              height: 100%;
+              width: 76%;
+              border-radius: 50px;
+              background-color: #C97579;
+              transition: width .6s;
+            }
+          }
+        }
+  
+        .signup-user-cards {
+          display: grid;
+          grid-template-columns: 1fr;
+          column-gap: 10px;
+          padding-bottom: 20px;
+          row-gap: 10px;
+          color: #2c3165;
+          position: relative;
+          @include tablet-portrait {
+            padding-top: 10px;
+            column-gap: 15px;
+            row-gap: 15px;
+          }
+  
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -37px;
+            right: -37px;
+            bottom: 0;
+            height: 500px;
+            width: calc(100% + 37px + 37px);
+            background-image: url(../images/backgrounds/loader-init-bkg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+  
+            @include tablet-portrait {
+              height: 350px;
+            }
+          }
+  
+          @include tablet-portrait {
+            padding-top: 20px;
+            padding-bottom: 14px;
+            grid-template-columns: 1fr 1fr;
+          }
+  
+          .signup-user-card {
+            background: white;
+            border-radius: 20px;
+            border: 1px solid #e2e6f1;
+            padding: 16px 14px 13px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            column-gap: 14px;
+            box-shadow: 0 1px 20px rgba(125,153,174,.16);
+            @include tablet-portrait {
+              grid-template-columns: 150px 1fr;
+            }
+  
+            .user-photo {
+              width: 100px;
+              height: 100px;
+              border-radius: 10px;
+              object-fit: cover;
+              border: 1px solid #E2E6F1;
+  
+              @include tablet-portrait {
+                width: 150px;
+                height: 150px;
+                grid-row: 1/3;
+              }
+  
+              img {
+                width: 100%;
+              }
+            }
+  
+            .card-text {
+              grid-column: 1/3;
+              padding-top: 13px;
+  
+              @include tablet-portrait {
+                padding-top: 0;
+                grid-column: 2/3;
+                margin-top: 10px;
+              }
+            }
+  
+            .info-wrap {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+  
+              @include tablet-portrait {
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 10px;
+              }
+  
+              .name {
+                font-size: 17px;
+                font-weight: 900;
+                margin-bottom: 6px;
+                display: inline-block;
+                color: #4F2C2D;
+              }
+  
+              .position {
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: #898cac;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .signup-sidebar-link {
+    margin: auto;
+  }
+
+
+.loader {
+    background-color: #FFEFF0;
+    display: flex;
+    height: 30px;
+    width: 100%;
+    border-radius: 50px;
+    margin-top: 40px;
+    position: relative;
+    span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        &.grey {
+            color: #9696bb;
+        }
+    }
+    .loader-fill {
+        background-color: #56d8ac;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        line-height: 0;
+        transition: width .6s;
+        &.blue {
+            background-color: #C97579;
+        }
+        &.w-100 {
+            width: 100%;
+        }
+        &.w-40 {
+            width: 40%;
+        }
+        &.w-62 {
+            width: 62%;
+        }
+        &.w-80 {
+            width: 80%;
+        }
+        &.wait {
+            width: 100%;
+            background-color: #FFEFF0;
+            color: #9696bb;
+        }
+    }
+}
+
+.mobile-loader {
+  display: block;
+  @include tablet-portrait {
+    display: none;
+  }
+}
+
+.loader-desk {
+  display: none;
+  @include tablet-portrait {
+    display: block;
+  }
+}

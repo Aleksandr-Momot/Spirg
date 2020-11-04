@@ -1,0 +1,49 @@
+.btn-propeople {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 15px;
+    color: $white;
+    padding: 14px;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.btn-propeople-transparent {
+    white-space: pre-wrap;
+}
+
+.btn-propeople-default {
+    @extend .btn-propeople;
+    color: #9696BB;
+    border: 1px solid #EAECF3;
+}
+
+.btn-propeople-active-tab {
+    @extend .btn-propeople;
+    background: #4261CE;
+    color: white;
+}
+
+.btn-propeople-circle {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.btn-propeople-circle-edit {
+    @extend .btn-propeople-circle;
+    display: flex;
+    background: $aqua;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-propeople-transparent {
+    @extend .btn-propeople;
+    color: #4F2C2D;
+    border-bottom: 1px solid #F8C2C4;
+    padding: 13px 14px;
+}

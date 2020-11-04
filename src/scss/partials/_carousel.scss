@@ -1,0 +1,244 @@
+.slide-card {
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  margin: 46px 5px;
+  margin-top: 20px;
+  .slide-wrapper {
+    border: 1px solid #E2E6F1;
+    padding: 10px;
+    border-radius: 10px;
+    .youtube-wrap {
+      .slide-text {
+        h4 {
+          font-size: 30px;
+          color: #4F2C2D;
+          font-weight: 900;
+          margin-top: 20px;
+        }
+        p {
+          font-size: 18px;
+          color: #4F2C2D;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  &.slick-current {
+    box-shadow: 0 20px 20px rgba(125, 153, 174, 0.16);
+
+    @include tablet-portrait {
+      box-shadow: none;
+    }
+  }
+
+  @include tablet-portrait {
+    margin: 46px 25px;
+    margin-top: 30px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .youtube-wrap {
+    position: relative;
+    overflow: hidden;
+    @include tablet-portrait {
+      min-height: 205px;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .slide-info {
+      padding: 23px 20px 27px 20px;
+      border: 1px solid #EBEDF3;
+      border-radius: 0 0 10px 10px;
+      img {
+        width: 95px;
+        height: 15px;
+        display: block;
+        object-fit: contain;
+      }
+      .rate-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          color: #4F2C2D;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+      .state-text {
+        color: #C97579;
+        font-size: 14px;
+        margin-top: 7px;
+        display: block;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.slide-image {
+  max-height: 207px;
+  width: 100%;
+  object-fit: cover;
+
+  @include tablet-portrait {
+    max-height: 320px;
+  }
+}
+
+.card-content {
+  padding: 20px 20px 10px 20px;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .wrap-name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 14px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: $aqua;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .name {
+      font-size: 20px;
+      margin-bottom: 4px;
+      font-weight: 700;
+
+      @include tablet-portrait {
+        font-size: 22px;
+      }
+    }
+
+    .position {
+      font-size: 14px;
+      color: #898cac;
+    }
+  }
+}
+
+.card-text {
+  padding-top: 20px;
+  line-height: 1.6;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -4px;
+  position: relative;
+  z-index: 2;
+  max-width: 175px;
+  margin: auto;
+
+  @include tablet-portrait {
+    max-width: calc(100% - (100% - 200px));
+  }
+
+  li {
+    width: 6px;
+    height: 6px;
+    background: #F8C2C4;
+    border-radius: 50%;
+    margin: 0 4px;
+    position: relative;
+
+    button {
+      display: none;
+    }
+
+    &.slick-active {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #C97579;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: #C97579;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: relative;
+  top: -30px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+
+  @include tablet-portrait {
+    position: relative;
+    top: -35px;
+  }
+
+  .arrow-btn {
+    background: #FCF0F1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #C97579;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    &.prev {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    svg {
+      stroke: #C97579;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #4F2C2D;
+      border: 1px solid #4F2C2D;
+      transition: all 0.5s;
+      svg {
+        stroke: #fff;
+      }
+    }
+  }
+}

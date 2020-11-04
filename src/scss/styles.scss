@@ -1,0 +1,24 @@
+//nice select
+@import '../../node_modules/jquery-nice-select/scss/nice-select.scss';
+//slick
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+//simplebar
+@import '../../node_modules/simplebar/dist/simplebar';
+//Modules
+@import "modules/variables";
+//Mixins
+@import "modules/mixins";
+//Partials
+@import "partials/typography";
+@import "partials/reset";
+@import "partials/base";
+@import "partials/buttons";
+@import "partials/selects";
+@import "partials/carousel";
+//Сommon styles
+@import "partials/common";
+//Layouts
+@import "layouts/spirg-home";
+@import "layouts/home";
+@import "layouts/spirg-loading-bar";
+@import "layouts/checkout";
